@@ -1,0 +1,58 @@
+<div class="section">
+    <div class="details shadow">
+        <div class="grid-wrapper">
+            <div class="left-div">
+                <h2>{{pokemon.name}}</h2>
+                <div class="type-info" >
+                    <div *ngFor="let types of pokemon.types">
+                        <p>{{types.type.name}}</p>
+                    </div>
+                </div>
+                <img [src]="pokemon.sprites.other.dream_world.front_default" alt="pokemon image" />
+            </div>
+
+            <div class="right-div">
+                <h2>Pokemon Details</h2>
+                <p><strong>Experience</strong>{{pokemon.base_experience}}</p>
+                <p><strong>Height</strong>{{ pokemon.height }} decimeter</p>
+                <p><strong>Weight</strong>{{ pokemon.weight }} hectogram</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        <h2>Photo Gallery</h2>
+        <div class="grid-wrapper">
+            <div class="card shadow">
+                <img [src]="pokemon.sprites.other.home.front_default" alt="" />
+              </div>
+              <div class="card shadow">
+                <img [src]="pokemon.sprites.other.home.front_shiny" alt="" />
+              </div>
+              <div class="card shadow">
+                <img [src]="pokemon.sprites.other.showdown.front_default" alt="" />
+              </div>
+              <div class="card shadow">
+                <img [src]="pokemon.sprites.other.showdown.back_default" alt="" />
+              </div>
+              <div class="card shadow">
+                <img [src]="pokemon.sprites.other.showdown.front_shiny" alt="" />
+              </div>
+              <div class="card shadow">
+                <img [src]="pokemon.sprites.other.showdown.back_shiny" alt="" />
+              </div>
+              <div class="card shadow">
+                <img
+                  [src]="pokemon.sprites.other?.['official-artwork'].front_default"
+                  alt=""
+                />
+              </div>
+              <div class="card shadow">
+                <img
+                  [src]="pokemon.sprites.other?.['official-artwork'].front_shiny"
+                  alt=""
+                />
+              </div>
+        </div>
+    </div>
+</div>

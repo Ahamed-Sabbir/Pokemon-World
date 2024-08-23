@@ -1,0 +1,9 @@
+<div class="navbar">
+    <h1>Pokemon-World</h1>
+    <h3>Wikipedia for pokemons</h3>
+
+    <form [formGroup]="searchForm" (ngSubmit)="search()">
+        <input type="text" placeholder="Pokemon Name" id="searchTerm" formControlName="searchTerm" />
+        <button class="button">Search</button>
+      </form>
+</div>
